@@ -61,9 +61,7 @@ public class EnderecoService {
         List< Endereco> listaEndereco = this.enderecoRepository.findAllByPessoaId(pessoaId);
         EnderecoDto enderecoPrincipalDto = new EnderecoDto();
         for (Endereco endereco: listaEndereco) {
-            System.out.println(endereco.getId());
             if(endereco.getId() == id){
-
                 endereco.setPrincipal(true);
                 this.enderecoRepository.save(endereco);
                 enderecoPrincipalDto = this.enderecoMapper.toDto(endereco);

@@ -100,13 +100,6 @@ public class EnderecoTestSteps {
 //    @Then("o endereço dessa pessoa deve ser editado com sucesso")
 //
 //
-////    Scenario: Buscar os endereços de uma pessoa
-//    @Given("o usuário deseja buscar os endereços de uma pessoa pelo id")
-//            | nome          | Maria      |
-//            | sobrenome     | Oliveira   |
-//            | dataNascimento| 1988-03-23 |
-//    @When("o endpoint /enderecos/buscar/getall/id é chamado")
-//    @Then("os endereços dessa pessoa devem ser buscados")
 
 
 //    Scenario: Determinar um endereço como principal para uma pessoa

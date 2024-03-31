@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b430a61-a692-4326-8f43-9d80c148b8c4" name="Changes" comment="Most part of code">
+    <list default="true" id="7b430a61-a692-4326-8f43-9d80c148b8c4" name="Changes" comment="Ajustes nos testes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/apipessoa/models/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/apipessoa/models/Endereco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/apipessoa/services/EnderecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/apipessoa/services/EnderecoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/api/apipessoa/steps/ApplicationTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/apipessoa/steps/ApplicationTestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/api/apipessoa/steps/EnderecoTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/apipessoa/steps/EnderecoTestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ApplicationTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ApplicationTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Endereco.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Endereco.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711855484174</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajustes nos testes">
+      <created>1711856427446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711856427446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -259,7 +268,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, begin the code." />
     <MESSAGE value="Most part of code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Most part of code" />
+    <MESSAGE value="Ajustes nos testes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes nos testes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -44,15 +44,5 @@ Scenario: Buscar um endereço de uma pessoa
   Then os endereços dessa pessoa devem ser buscados
 
 
-Scenario: Buscar os endereços de uma pessoa
-  Given o usuário deseja buscar os endereços de uma pessoa pelo id da pessoa
-  | nome          | Maria      |
-  | sobrenome     | Oliveira   |
-  | dataNascimento| 1988-03-23 |
-  When o endpoint /enderecos/buscar/getall/id é chamado
-  Then os endereços dessa pessoa devem ser buscados
 
-Scenario: Determinar um endereço como principal para uma pessoa
-  Given o usuário definir um endereço de uma pessoa como principal
-  When o endpoint enderecos/principal/id/pessoaId é chamado
-  Then o endereço principal dessa pessoa é alterado
+

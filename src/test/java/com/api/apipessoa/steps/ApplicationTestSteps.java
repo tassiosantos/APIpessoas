@@ -173,7 +173,28 @@ public class ApplicationTestSteps {
         assertEquals(pessoasSalvas.size(), 5);
     }
 
-//    Scenario: Determinar um endereço como principal para uma pessoa
+//    Scenario: Buscar os endereços de uma pessoa
+
+    List<EnderecoDto> listaEnderecosPessoaDto = new ArrayList<>();
+    @Given("o usuário deseja buscar os endereços de uma pessoa pelo id da pessoa")
+    public void determinarPessoaEnderecos(){
+        pessoa.setId(1L);
+        enderecos = mockEnderecos();
+    }
+    @When("^o endpoint enderecos/buscar/getall/id é chamado")
+    public void buscarEnderecosDaPessoa(){
+        when(this.enderecoRepository.findAllByPessoaId(any(Long.class))).thenReturn(enderecos);
+        listaEnderecosPessoaDto = this.enderecoController.buscarTodosEnderecosPessoa(1L).getBody();
+    }
+    @Then("os endereços dessa pessoa devem ser buscados")
+    public void verificiarLista(){
+        assertEquals(listaEnderecosPessoaDto.size(), 3);
+    }
+
+
+
+
+    //    Scenario: Determinar um endereço como principal para uma pessoa
     Endereco enderecoPrincipal = new Endereco();
     Endereco novoEnderecoPrincipal = new Endereco();
     List<Endereco> enderecos =  mockEnderecos();
@@ -194,7 +215,7 @@ public class ApplicationTestSteps {
     }
     @Then("o endereço principal dessa pessoa é alterado")
     public void verificaNovoEnderecoPrincipal(){
-//        assertNotEquals(enderecoPrincipal.toString(), novoEnderecoPrincipal.toString());
+        assertNotEquals(enderecoPrincipal.toString(), novoEnderecoPrincipal.toString());
         assertTrue(novoEnderecoPrincipal.getPrincipal());
         assertFalse(enderecoPrincipal.getPrincipal());
     }
