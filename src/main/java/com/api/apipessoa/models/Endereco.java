@@ -44,6 +44,8 @@ public class Endereco {
         return id;
     }
 
+    public void setId(Long id){this.id = id;}
+
     public Pessoa getPessoa() {
         return pessoa;
     }

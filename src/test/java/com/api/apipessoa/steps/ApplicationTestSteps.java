@@ -190,6 +190,7 @@ public class ApplicationTestSteps {
         when(this.enderecoRepository.findAllByPessoaId(any(Long.class))).thenReturn(enderecos);
         when(this.enderecoRepository.save(any(Endereco.class))).thenReturn(any(Endereco.class));
         novoEnderecoPrincipal = this.enderecoMapper.toEntity(this.enderecoController.definirComoPrincipal(2L, 1L).getBody());
+//        System.out.println(novoEnderecoPrincipal.getCidade());
     }
     @Then("o endereço principal dessa pessoa é alterado")
     public void verificaNovoEnderecoPrincipal(){
@@ -203,7 +204,7 @@ public class ApplicationTestSteps {
         List<EnderecoDto> enderecosDto = new ArrayList<>();
         pessoaDto = new PessoaDto(1L,"João", "José", LocalDate.now());
         pessoa = pessoaMapper.toEntity(pessoaDto);
-        System.out.println(pessoa.getNome());
+//        System.out.println(pessoa.getNome());
 
         enderecosDto.add(new EnderecoDto(1L, true, pessoa, "SP", "São Paulo", "01000-000", "Rua A", "123"));
         enderecosDto.add(new EnderecoDto(2L, false, pessoa, "RJ", "Rio de Janeiro", "20000-000", "Rua B", "456"));
@@ -214,8 +215,11 @@ public class ApplicationTestSteps {
     private List<Endereco> mockEnderecos(){
         List<Endereco> enderecos = new ArrayList<>();
         List<EnderecoDto> enderecosDtos = mockEnderecosDto();
+        Endereco endereco = new Endereco();
         for (EnderecoDto enderecoDto: enderecosDtos) {
-            enderecos.add(this.enderecoMapper.toEntity(enderecoDto));
+            endereco = this.enderecoMapper.toEntity(enderecoDto);
+            endereco.setId(enderecoDto.getId());
+            enderecos.add(endereco);
         }
         return enderecos;
     }
