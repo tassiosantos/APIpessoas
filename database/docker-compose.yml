@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: database-container
+    image: postgres:13.2
+    environment:
+      POSTGRES_DB: api-pessoas
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
