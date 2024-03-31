@@ -41,6 +41,13 @@ Feature: Teste das funcionalidades da Pessoa
     When o endpoint /pessoas/getall é chamado
     Then a lista de pessoas adicionadas deve ser chamada
 
+Scenario: Buscar um endereço de uma pessoa
+  Given o usuário deseja buscar um endereço de uma pessoa pelo id da pessoa e do endereço
+  When o endpoint enderecos/buscar/id é chamado
+  Then o endereço dessa pessoa deve ser buscado
+
+
+
 Scenario: Buscar os endereços de uma pessoa
   Given o usuário deseja buscar os endereços de uma pessoa pelo id da pessoa
   When o endpoint enderecos/buscar/getall/id é chamado

@@ -173,6 +173,24 @@ public class ApplicationTestSteps {
         assertEquals(pessoasSalvas.size(), 5);
     }
 
+//    Scenario: Buscar um endereço de uma pessoa
+    @Given("o usuário deseja buscar um endereço de uma pessoa pelo id da pessoa e do endereço")
+    public void determinaPessoa(){
+        pessoa.setId(1L);
+        enderecos = mockEnderecos();
+    }
+    @When("^o endpoint enderecos/buscar/id é chamado")
+    public void buscarEndereco(){
+        Integer id = 1;
+        Optional<Endereco> optEndereco = Optional.of(enderecos.get(id));
+        when(this.enderecoRepository.findById(any(Long.class))).thenReturn(optEndereco);
+        enderecoDto = this.enderecoController.buscarEndereco(id.longValue()).getBody();
+    }
+    @Then("o endereço dessa pessoa deve ser buscado")
+    public void verificaEnderecoBuscado(){
+        assertNotNull(enderecoDto);
+    }
+
 //    Scenario: Buscar os endereços de uma pessoa
 
     List<EnderecoDto> listaEnderecosPessoaDto = new ArrayList<>();

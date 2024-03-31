@@ -35,13 +35,6 @@ Scenario: Editar um endereço de uma pessoa
   When o endpoint enderecos/editar/id é chamado
   Then o endereço dessa pessoa deve ser editado com sucesso
 
-Scenario: Buscar um endereço de uma pessoa
-  Given o usuário deseja buscar um endereço de uma pessoa pelo id da pessoa e do endereço
-  | nome          | Maria      |
-  | sobrenome     | Oliveira   |
-  | dataNascimento| 1988-03-23 |
-  When o endpoint /enderecos/buscar/getall/id é chamado
-  Then os endereços dessa pessoa devem ser buscados
 
 
 
